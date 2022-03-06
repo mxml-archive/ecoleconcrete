@@ -1,0 +1,14 @@
+version: "3.9"
+
+services:
+    app:
+      container_name: ecoleconcrete
+      build: .
+      restart: always
+      ports:
+        - "8080:80"
+
+networks:
+  nginxproxymanager_default:
+    external:
+      name: nginxproxymanager_default
