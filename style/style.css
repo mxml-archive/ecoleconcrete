@@ -1,0 +1,530 @@
+/*Fonts*/
+@font-face {
+    font-family: 'Stanley';
+    src: url('../fonts/StanleyRegular.woff2') format('woff2'),
+        url('../fonts/StanleyRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*Global*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    color: #ECF0F3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.active {
+    cursor: grabbing;
+}
+
+h1, h2 {
+    font-family: 'Stanley';
+}
+
+body {
+    font-family: sans-serif;
+    background: #1A1A1A;
+    font-family: 'Poppins', sans-serif;
+    color: #1A1A1A;
+}
+
+header {
+    height: 100vh;
+    padding: 50px 50px 0 50px;
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li {
+    color: #ECF0F3;
+    padding-right: 50px;
+}
+
+.menu ul li:last-child {
+    padding-right: 0;
+}
+
+
+h1 {
+    color: #ECF0F3;
+    font-size: 50px;
+    line-height: .8;
+}
+
+.baseline {
+    text-align: right;
+    text-transform: uppercase;
+    color: #F2D17C;
+    display: block;
+    font-size: 10px;
+}
+
+.img-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 440px;
+    height: 324px;
+}
+
+.img-wrapper img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.link-atelier {
+    list-style: none;
+    color: #ECF0F3;
+    writing-mode: vertical-lr;
+    text-transform: uppercase;
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    letter-spacing: .5em;
+    text-decoration: none;
+
+}
+
+.bouton-share {
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+}
+
+.link-share {
+    display: block;
+    background-image: url(../img/share.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.icon {
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    width: 25px;
+    height: 25px;
+}
+
+.twitch {
+    background-image: url(../img/twitch.svg);
+}
+
+.discord {
+    background-image: url(../img/discord.svg);
+}
+
+.twitter {
+    background-image: url(../img/twitter.svg);
+}
+
+.instagram {
+    background-image: url(../img/intsagram.svg);
+}
+
+.facebook {
+    background-image: url(../img/facebook.svg);
+}
+
+.sn-items.notActive {
+    display: none;
+}
+
+.sn-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sn-items a {
+    margin-bottom: 25px;
+}
+
+.ecole {
+    background: #ECF0F3;
+    padding: 100px 150px;
+}
+
+.ecole-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ecole-container.reverse {
+    margin-top: 50px;
+    flex-direction: row-reverse;
+}
+
+.ecole-container .img, .ecole-container .text {
+    width: 48%;
+}
+
+.ecole-container .img {
+    height: 500px;
+    background-image: url(../img/photo.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.ecole-container .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.ecole-container .text h2 {
+    font-size: 90px;
+    line-height: 75px;
+}
+
+.ecole-container .text p {
+    font-size: 16px;
+    line-height: 1.6em;
+}
+
+.button {
+    padding: 13px 30px;
+    line-height: normal;
+    transition: .3s ease;
+}
+
+.button--black {
+    background: #1A1A1A;
+    color: #ECF0F3;
+}
+
+.button--white {
+    background: #ECF0F3;
+    color: #1A1A1A;
+}
+
+.button--black:hover, .button--white:hover {
+    background: #F2D17C;
+    color: #1A1A1A;
+}
+
+.promotions {
+    background-color: #ECF0F3;
+    text-align: center;
+    padding: 0 150px 100px;
+}
+
+.promotions h2 {
+    font-size: 90px;
+    line-height: 75px;
+    color: #1A1A1A;
+    margin-bottom: 100px;
+}
+
+.cursus-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+.cursus {
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.border-black {
+    width: 71px;
+    border-bottom: 3px solid #1A1A1A;
+}
+
+.span-police {
+    color: #F2D17C;
+    font-weight: bold;
+}
+
+.conferences {
+    padding: 100px 150px;
+    text-align: center;
+}
+
+.content-title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 40px;
+    line-height: 48px;
+}
+
+.content-title .title {
+    font-size: 90px;
+    color: #ECF0F3;
+}
+
+.content-title .border {
+    border-bottom: 3px solid #ECF0F3;
+}
+
+
+.carousel-conferences {
+    display: flex;
+    overflow-x: scroll;
+    gap: 30px;
+    user-select: none;
+    margin-top: 60px;
+}
+
+.carousel-conferences::-webkit-scrollbar {
+    display: none;
+}
+
+.conferences-container {
+    padding: 30px 20px;
+    background: #ECF0F3;
+    min-width: 310px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+}
+
+.conferences .title-conferences {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.conferences .button--white {
+    margin: 60px auto 0;
+    display: inline-block;
+}
+
+.conferences .text-conferences {
+    text-align: left;
+}
+
+.conferences .bulle, .conferences .title-conferences, .conferences .button--black {
+    text-align: center;
+    width: 100%;
+}
+
+footer {
+    padding: 100px 150px 0;
+    width: 100%;
+    background: #1A1A1A;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+}
+
+.contactDetails {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    color: #ECF0F3;
+    padding: 50px 0;
+}
+
+.phone, .mail {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+form[action="contact"] {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#lastname, #name {
+    width: 47%;
+}
+
+#mail, #subject, #message {
+    width: 100%;
+}
+
+form[action="contact"] input, #message {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ECF0F3;
+    font-size: 16px;
+    color: #ECF0F3;
+}
+
+form[action="contact"] input::placeholder, #message::placeholder {
+    font-size: 16px;
+    color: #ECF0F3;
+    font-family: 'Poppins';
+}
+
+form[action="contact"] input {
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+#message {
+    height: 140px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 15px 30px;
+    border: 0;
+}
+
+.champs {
+    color: #F2D17C;
+    font-size: 12px;
+}
+
+.ateliers {
+    padding: 100px 150px;
+    background: #ECF0F3;
+}
+
+.ateliers .title {
+    color: #1A1A1A;
+    font-size: 90px;
+}
+
+.ateliers .border {
+    border-color: #1A1A1A;
+}
+
+.carousel-ateliers {
+    display: flex;
+    overflow-x: scroll;
+    gap: 30px;
+    user-select: none;
+    margin-top: 60px;
+}
+
+.carousel-ateliers::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-ateliers>div {
+    display: flex;
+}
+
+.ateliers-container {
+    padding: 20px;
+    background: #1A1A1A;
+    min-width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 11px;
+    color: #ECF0F3;
+}
+
+.ateliers-container .title-ateliers {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.ateliers-container .badge {
+    border-radius: 100px;
+    background: #F2D17C;
+    color: #1A1A1A;
+    padding: 5px 15px;
+}
+
+.newsletter {
+    margin-top: 100px;
+}
+
+#email_news {
+    width: 80%;
+}
+
+@media (max-width: 900px) {
+    .menu ul {
+        display: none;
+    }
+
+    .img-wrapper {
+        width: 250px;
+        height: 184px;
+    }
+
+    h2 {
+        font-size: 35px !important;
+        line-height: inherit !important;
+    }
+
+    .border {
+        display: none;
+    }
+
+    .content-title {
+        grid-template-columns: none;
+    }
+
+    .content-title h2 {
+        text-align: center;
+    }
+
+    .ecole, .conferences, .ateliers, footer {
+        padding: 100px 50px;
+    }
+
+    .ecole-container, .cursus-container {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 50px;
+    }
+
+    .ecole-container .img, .ecole-container .text {
+        width: 100%;
+    }
+
+    .promotions {
+        padding: 0 50px 100px;
+    }
+
+    .promotions h2 {
+        margin-bottom: 50px;
+    }
+
+    .contactDetails {
+        flex-direction: column;
+        align-items: center;
+    }
+}
